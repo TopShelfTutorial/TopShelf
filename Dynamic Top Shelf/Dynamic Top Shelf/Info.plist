@@ -28,5 +28,24 @@
 	</array>
 	<key>UIUserInterfaceStyle</key>
 	<string>Automatic</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>music</string>
+			</array>
+			<key>CFBundleURLName</key>
+			<string>Music URL</string>
+		</dict>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>movies</string>
+			</array>
+			<key>CFBundleURLName</key>
+			<string>Movies URL</string>
+		</dict>
+	</array>
 </dict>
 </plist>

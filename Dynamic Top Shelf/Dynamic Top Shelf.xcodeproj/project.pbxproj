@@ -22,6 +22,7 @@
 		E2BE7CFA2035FC7B00119A9C /* 4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E2BE7CF82035FC7B00119A9C /* 4@2x.png */; };
 		E2BE7CFE2035FCAA00119A9C /* 5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E2BE7CFC2035FCA900119A9C /* 5@2x.png */; };
 		E2BE7CFF2035FCAA00119A9C /* 5.png in Resources */ = {isa = PBXBuildFile; fileRef = E2BE7CFD2035FCAA00119A9C /* 5.png */; };
+		E2BF561F2036101700798E7B /* URL+QueryParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2BF561E2036101700798E7B /* URL+QueryParameters.swift */; };
 		EB8964E3202E22D4003595C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8964E2202E22D4003595C0 /* AppDelegate.swift */; };
 		EB8964E5202E22D4003595C0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8964E4202E22D4003595C0 /* ViewController.swift */; };
 		EB8964E8202E22D4003595C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB8964E6202E22D4003595C0 /* Main.storyboard */; };
@@ -69,6 +70,7 @@
 		E2BE7CF82035FC7B00119A9C /* 4@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "4@2x.png"; sourceTree = "<group>"; };
 		E2BE7CFC2035FCA900119A9C /* 5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "5@2x.png"; sourceTree = "<group>"; };
 		E2BE7CFD2035FCAA00119A9C /* 5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 5.png; sourceTree = "<group>"; };
+		E2BF561E2036101700798E7B /* URL+QueryParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+QueryParameters.swift"; sourceTree = "<group>"; };
 		EB8964DF202E22D4003595C0 /* Dynamic Top Shelf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dynamic Top Shelf.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB8964E2202E22D4003595C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EB8964E4202E22D4003595C0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				EB8964E2202E22D4003595C0 /* AppDelegate.swift */,
+				E2BF561E2036101700798E7B /* URL+QueryParameters.swift */,
 				EB8964E4202E22D4003595C0 /* ViewController.swift */,
 				EB8964E6202E22D4003595C0 /* Main.storyboard */,
 				EB8964E9202E22D4003595C0 /* Assets.xcassets */,
@@ -311,6 +314,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB8964E5202E22D4003595C0 /* ViewController.swift in Sources */,
+				E2BF561F2036101700798E7B /* URL+QueryParameters.swift in Sources */,
 				EB8964E3202E22D4003595C0 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

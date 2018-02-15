@@ -21,6 +21,15 @@ class ServiceProvider: NSObject, TVTopShelfProvider {
         return .sectioned
     }
 
+    func createSection(title: String) -> TVContentItem {
+        let identifier = TVContentIdentifier(identifier: title, container: nil)!
+        //Create an item to serve as a Top Shelf section.
+        let section = TVContentItem(contentIdentifier: identifier)!
+        section.title = title
+
+        return section
+    }
+
     func createTopShelfItem(identifier: String, imageName: String, imageShape: TVContentItemImageShape) -> TVContentItem? {
         guard let url1x = Bundle.main.url(forResource: imageName, withExtension: "png") else {
             print("\(imageName).png not found, please provide a valid image.")
@@ -42,20 +51,38 @@ class ServiceProvider: NSObject, TVTopShelfProvider {
         item.setImageURL(url1x, forTraits: .screenScale1x)
         item.setImageURL(url2x, forTraits: .screenScale2x)
 
+        //Set item title. Appears when the item is currently focused.
+        item.title = itemIdentifier.identifier
+
         return item
     }
 
-    func createSection(title: String) -> TVContentItem {
-        let identifier = TVContentIdentifier(identifier: title, container: nil)!
-        //Create an item to serve as a Top Shelf section.
-        let section = TVContentItem(contentIdentifier: identifier)!
-        section.title = title
+    private func identifySectionItems(for section: TVContentItem) {
+        section.topShelfItems?.forEach { item in
+            item.displayURL = urlFor(item: item, scheme: section.title?.lowercased() ?? "")
+            print(item.displayURL)
+        }
+    }
 
-        return section
+    ///Generates a URL for Deep Linking
+    private func urlFor(item: TVContentItem, scheme: String) -> URL {
+        var components = URLComponents()
+        components.scheme = scheme
+        components.queryItems = [URLQueryItem(name: "identifier", value: item.contentIdentifier.identifier)]
+
+        return components.url!
     }
 
     // Provide an array of TVContentItems.
     var topShelfItems: [TVContentItem] {
+        let musicSection = createSection(title: "Music")
+
+        musicSection.topShelfItems = [
+            createTopShelfItem(identifier: "The Beatles - Abbey Road",
+                               imageName: "4",
+                               imageShape: .square)!
+        ]
+
         let moviesSection = createSection(title: "Movies")
 
         //Add items to the section
@@ -77,13 +104,9 @@ class ServiceProvider: NSObject, TVTopShelfProvider {
                                imageShape: .poster)!
         ]
 
-        let musicSection = createSection(title: "Music")
-
-        musicSection.topShelfItems = [
-            createTopShelfItem(identifier: "The Beatles - Album Cover",
-                               imageName: "4",
-                               imageShape: .square)!
-        ]
+        //Set the display URLs to enable deep linking.
+        identifySectionItems(for: musicSection)
+        identifySectionItems(for: moviesSection)
 
         //Add the sections to the Top Shelf.
         return [musicSection, moviesSection]
