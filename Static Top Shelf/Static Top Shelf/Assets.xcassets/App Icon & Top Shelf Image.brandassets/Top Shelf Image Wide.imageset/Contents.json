@@ -2,7 +2,13 @@
   "images" : [
     {
       "idiom" : "tv",
+      "filename" : "strangerthings.png",
       "scale" : "1x"
+    },
+    {
+      "idiom" : "tv",
+      "filename" : "strangerthings@2x.png",
+      "scale" : "2x"
     }
   ],
   "info" : {
