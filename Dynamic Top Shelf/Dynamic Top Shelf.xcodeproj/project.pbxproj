@@ -7,13 +7,44 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E2BE7CD22035EF4200119A9C /* TVServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2BE7CD12035EF4100119A9C /* TVServices.framework */; };
+		E2BE7CD52035EF4200119A9C /* ServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2BE7CD42035EF4200119A9C /* ServiceProvider.swift */; };
+		E2BE7CD92035EF4200119A9C /* TopShelf.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E2BE7CCF2035EF4100119A9C /* TopShelf.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		EB8964E3202E22D4003595C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8964E2202E22D4003595C0 /* AppDelegate.swift */; };
 		EB8964E5202E22D4003595C0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8964E4202E22D4003595C0 /* ViewController.swift */; };
 		EB8964E8202E22D4003595C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB8964E6202E22D4003595C0 /* Main.storyboard */; };
 		EB8964EA202E22D4003595C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB8964E9202E22D4003595C0 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		E2BE7CD72035EF4200119A9C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EB8964D7202E22D4003595C0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E2BE7CCE2035EF4100119A9C;
+			remoteInfo = TopShelf;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E2BE7CDD2035EF4200119A9C /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				E2BE7CD92035EF4200119A9C /* TopShelf.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		E2BE7CCF2035EF4100119A9C /* TopShelf.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = TopShelf.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2BE7CD12035EF4100119A9C /* TVServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TVServices.framework; path = System/Library/Frameworks/TVServices.framework; sourceTree = SDKROOT; };
+		E2BE7CD42035EF4200119A9C /* ServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProvider.swift; sourceTree = "<group>"; };
+		E2BE7CD62035EF4200119A9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB8964DF202E22D4003595C0 /* Dynamic Top Shelf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dynamic Top Shelf.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB8964E2202E22D4003595C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EB8964E4202E22D4003595C0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -23,6 +54,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		E2BE7CCC2035EF4100119A9C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2BE7CD22035EF4200119A9C /* TVServices.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EB8964DC202E22D4003595C0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -33,10 +72,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E2BE7CD02035EF4100119A9C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E2BE7CD12035EF4100119A9C /* TVServices.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E2BE7CD32035EF4200119A9C /* TopShelf */ = {
+			isa = PBXGroup;
+			children = (
+				E2BE7CD42035EF4200119A9C /* ServiceProvider.swift */,
+				E2BE7CD62035EF4200119A9C /* Info.plist */,
+			);
+			path = TopShelf;
+			sourceTree = "<group>";
+		};
 		EB8964D6202E22D4003595C0 = {
 			isa = PBXGroup;
 			children = (
 				EB8964E1202E22D4003595C0 /* Dynamic Top Shelf */,
+				E2BE7CD32035EF4200119A9C /* TopShelf */,
+				E2BE7CD02035EF4100119A9C /* Frameworks */,
 				EB8964E0202E22D4003595C0 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -45,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				EB8964DF202E22D4003595C0 /* Dynamic Top Shelf.app */,
+				E2BE7CCF2035EF4100119A9C /* TopShelf.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -64,6 +123,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		E2BE7CCE2035EF4100119A9C /* TopShelf */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E2BE7CDC2035EF4200119A9C /* Build configuration list for PBXNativeTarget "TopShelf" */;
+			buildPhases = (
+				E2BE7CCB2035EF4100119A9C /* Sources */,
+				E2BE7CCC2035EF4100119A9C /* Frameworks */,
+				E2BE7CCD2035EF4100119A9C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TopShelf;
+			productName = TopShelf;
+			productReference = E2BE7CCF2035EF4100119A9C /* TopShelf.appex */;
+			productType = "com.apple.product-type.tv-app-extension";
+		};
 		EB8964DE202E22D4003595C0 /* Dynamic Top Shelf */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = EB8964EE202E22D4003595C0 /* Build configuration list for PBXNativeTarget "Dynamic Top Shelf" */;
@@ -71,10 +147,12 @@
 				EB8964DB202E22D4003595C0 /* Sources */,
 				EB8964DC202E22D4003595C0 /* Frameworks */,
 				EB8964DD202E22D4003595C0 /* Resources */,
+				E2BE7CDD2035EF4200119A9C /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				E2BE7CD82035EF4200119A9C /* PBXTargetDependency */,
 			);
 			name = "Dynamic Top Shelf";
 			productName = "Dynamic Top Shelf";
@@ -91,6 +169,10 @@
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = "Daniel Lima";
 				TargetAttributes = {
+					E2BE7CCE2035EF4100119A9C = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
 					EB8964DE202E22D4003595C0 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
@@ -111,11 +193,19 @@
 			projectRoot = "";
 			targets = (
 				EB8964DE202E22D4003595C0 /* Dynamic Top Shelf */,
+				E2BE7CCE2035EF4100119A9C /* TopShelf */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		E2BE7CCD2035EF4100119A9C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EB8964DD202E22D4003595C0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -128,6 +218,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		E2BE7CCB2035EF4100119A9C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2BE7CD52035EF4200119A9C /* ServiceProvider.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EB8964DB202E22D4003595C0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -138,6 +236,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E2BE7CD82035EF4200119A9C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E2BE7CCE2035EF4100119A9C /* TopShelf */;
+			targetProxy = E2BE7CD72035EF4200119A9C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		EB8964E6202E22D4003595C0 /* Main.storyboard */ = {
@@ -151,6 +257,36 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		E2BE7CDA2035EF4200119A9C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VY9L7K3A35;
+				INFOPLIST_FILE = TopShelf/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.top.shelf.Dynamic-Top-Shelf.TopShelf";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 3;
+			};
+			name = Debug;
+		};
+		E2BE7CDB2035EF4200119A9C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VY9L7K3A35;
+				INFOPLIST_FILE = TopShelf/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.top.shelf.Dynamic-Top-Shelf.TopShelf";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 3;
+			};
+			name = Release;
+		};
 		EB8964EC202E22D4003595C0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -259,6 +395,7 @@
 		EB8964EF202E22D4003595C0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
@@ -275,6 +412,7 @@
 		EB8964F0202E22D4003595C0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
@@ -291,6 +429,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		E2BE7CDC2035EF4200119A9C /* Build configuration list for PBXNativeTarget "TopShelf" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E2BE7CDA2035EF4200119A9C /* Debug */,
+				E2BE7CDB2035EF4200119A9C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		EB8964DA202E22D4003595C0 /* Build configuration list for PBXProject "Dynamic Top Shelf" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
