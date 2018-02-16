@@ -33,18 +33,10 @@
 		<dict>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>music</string>
+				<string>topshelfapp</string>
 			</array>
 			<key>CFBundleURLName</key>
-			<string>Music URL</string>
-		</dict>
-		<dict>
-			<key>CFBundleURLSchemes</key>
-			<array>
-				<string>movies</string>
-			</array>
-			<key>CFBundleURLName</key>
-			<string>Movies URL</string>
+			<string>TopShelfApp URL</string>
 		</dict>
 	</array>
 </dict>

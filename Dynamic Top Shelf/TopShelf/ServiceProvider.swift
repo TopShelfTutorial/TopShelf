@@ -59,15 +59,15 @@ class ServiceProvider: NSObject, TVTopShelfProvider {
 
     private func identifySectionItems(for section: TVContentItem) {
         section.topShelfItems?.forEach { item in
-            item.displayURL = urlFor(item: item, scheme: section.title?.lowercased() ?? "")
-            print(item.displayURL)
+            item.displayURL = urlFor(item: item)
         }
     }
 
     ///Generates a URL for Deep Linking
-    private func urlFor(item: TVContentItem, scheme: String) -> URL {
+    private func urlFor(item: TVContentItem) -> URL {
         var components = URLComponents()
-        components.scheme = scheme
+        //Scheme defined inside Info.plist
+        components.scheme = "topshelfapp"
         components.queryItems = [URLQueryItem(name: "identifier", value: item.contentIdentifier.identifier)]
 
         return components.url!
